@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  /* Robust Brown Palette */
+  --color-stone: #f4f2f0;
+  --color-latte: #e8e2dc;
+  --color-terracotta: #a67b5b;
+  --color-cacao: #2d241f;
+  --color-espresso: #1a1512;
+  --color-umber: #4a3728;
+  --color-clay: #8c7361;
+}
+
+@layer base {
+  body {
+    @apply bg-stone text-espresso selection:bg-umber selection:text-white;
+  }
+}
+
+.lux-container {
+  @apply max-w-7xl mx-auto px-6 lg:px-12;
+}
+
+.serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.bg-gradient-brown {
+  background: linear-gradient(180deg, var(--color-stone) 0%, var(--color-latte) 100%);
+}
